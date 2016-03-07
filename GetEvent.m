@@ -1,5 +1,5 @@
 function [nev,t,du]=GetEvent(P_NUM)
-[ndata, text, alldata]=xlsread(['D:\MATLAB\Breath_Project\EventList\' P_NUM '.xls'],P_NUM);
+[ndata, text, alldata]=xlsread(['../EventList/' P_NUM '.xls'],P_NUM);
 [nrow,ncol]=size(alldata);
 nCSA=0;
 nOSA=0;

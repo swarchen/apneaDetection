@@ -2,8 +2,10 @@ close all
 clear all
 clc
 [par]=GetPars;
-pnum = csvread('pnum47.csv',0,0);
-len=length(pnum);
+%pnum = csvread('pnum47.csv',0,0);
+pnum = 1049;
+%len=length(pnum);
+len=1;
 % load csa.mat
 
 for numTap=12:12
@@ -34,7 +36,7 @@ MSA=par.st.msa;%3;
 %% Read PSG
 type='all';
 [ABD,THO,CFlow,STAGE]=ReadPsgFiles(P_NUM,type,par.fs);
-load(['/home/yylin/BreathAlgo/RcSig1/sstTHOABD_' (P_NUM) '.mat']);
+load(['../THOABD/' P_NUM '.mat']);
 %% Parameters
 fs=par.fs;%100;
 fsDown=par.fsDown;%10;
